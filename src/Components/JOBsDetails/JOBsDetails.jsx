@@ -1,7 +1,8 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { saveStoredJobApplication } from "../../Utility/LocalStorage";
+import { saveInLocalStorage } from "../../Utility2/FunctionOfLocalStorage";
+// import { saveStoredJobApplication } from "../../Utility/LocalStorage";
 
 
 
@@ -10,11 +11,12 @@ const JOBsDetails = () => {
     const jobs=useLoaderData()
     const {id}=useParams()
     const intId=parseInt(id)
-    const job = jobs.find(job=>job.id===parseInt(intId))
+    const job = jobs.find(job=>job.id===intId)
     const {job_description,job_responsibility,educational_requirements,experiences,salary,job_title,contact_information}=job ;
 
 const handleApplyToast=()=>{
-    saveStoredJobApplication(intId)
+    // saveStoredJobApplication(intId)
+    saveInLocalStorage(intId);
     toast('your applied successfully')
 }
 

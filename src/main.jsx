@@ -10,10 +10,11 @@ import Root from './Root/Root';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
 import Home from './Components/Home/Home';
 import Statistics from './Components/Statistics/Statistics';
-import Applied from './Components/Applied-Job/Applied';
+// import Applied from './Components/Applied-Job/Applied';
 import Blogs from './Components/Blogs/Blogs';
 import JobsFeature from './Components/JobsFeature/JobsFeature';
 import JOBsDetails from './Components/JOBsDetails/JOBsDetails';
+import RecapApplied from './Components/RecapApplied/RecapApplied';
 
 
 
@@ -41,11 +42,11 @@ const router = createBrowserRouter([
         path:"/Statistics",
         element:<Statistics></Statistics>
       },
-      {
-        path:"/Applied",
-        loader:()=>fetch('JobsFeature.json'),
-        element:<Applied></Applied>
-      },
+      // {
+      //   path:"/Applied",
+      //   loader:()=>fetch('JobsFeature.json'),
+      //   element:<Applied></Applied>
+      // },
       {
         path:"/Blogs",
         element:<Blogs></Blogs>
@@ -55,8 +56,11 @@ const router = createBrowserRouter([
         loader:()=>fetch('JobsFeature.json'),
         element:<JOBsDetails></JOBsDetails>
       },
-      
-     
+      {
+        path:"/recap",
+        loader:()=>fetch('JobsFeature.json'),
+        element:<RecapApplied></RecapApplied>
+      },
     ]
   },
  

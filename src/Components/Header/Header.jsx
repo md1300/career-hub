@@ -14,8 +14,9 @@ const Header = () => {
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
       <NavLink to='/' >home</NavLink>
     <NavLink to='/Statistics' >Statistics</NavLink>
-    <NavLink to='/Applied'>Applied Jobs</NavLink>
+    {/* <NavLink to='/Applied'>Applied Jobs</NavLink> */}
     <NavLink to='/Blogs' >Blogs</NavLink>
+    <NavLink to='/recap'> recapApplication</NavLink>
       </ul>
     </div>
     <a className="btn btn-ghost text-xl">Career Hub</a>
@@ -24,8 +25,9 @@ const Header = () => {
     <ul className="menu menu-horizontal px-1 gap-5">
     <NavLink to='/' >home</NavLink>
     <NavLink to='/Statistics' >Statistics</NavLink>
-    <NavLink to='/Applied' >Applied Jobs</NavLink>
+    {/* <NavLink to='/Applied' >Applied Jobs</NavLink> */}
     <NavLink to='/Blogs' >Blogs</NavLink>
+    <NavLink to='/recap'> recapApplication</NavLink>
     </ul>
   </div>
   <div className="navbar-end">
